@@ -5,12 +5,13 @@ import "fmt"
 import "io/ioutil"
 import "github.com/moovweb/gokogiri/xml"
 
-type Test struct {
-}
-
-
 func main() {
   args := os.Args[1:]
+
+  if len(args) <= 1 {
+    fmt.Println("You must specify a filename")
+    os.Exit(0)
+  }
 
   dat, err := ioutil.ReadFile(args[0])
   if err != nil {
