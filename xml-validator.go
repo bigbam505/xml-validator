@@ -8,7 +8,7 @@ import "github.com/moovweb/gokogiri/xml"
 func main() {
   args := os.Args[1:]
 
-  if len(args) <= 1 {
+  if len(args) < 1 {
     fmt.Println("You must specify a filename")
     os.Exit(0)
   }
